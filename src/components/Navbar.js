@@ -17,16 +17,17 @@ const Navbar = () => {
           {pageLinks.map((link) => {
             return (
               <li key={link.id}>
-                <a href={link.href} className="nav-link"> {link.text} </a>
+                <a href={link.href} 
+                className="nav-link"> 
+                {link.text} </a>
               </li>
             );
-
           })}
         </ul>
 
         <ul className="nav-icons">
-          {socialLinks.map((link) => {
-            const { id, href, icon } = link;
+          {socialLinks.map((icons) => {
+            const { id, href, icon } = icons;
             return (
               <li key={id}>
                 <a href={href}
@@ -36,7 +37,7 @@ const Navbar = () => {
                   <i className={icon}></i>
                 </a>
               </li>
-            )
+            );
           })}
         </ul>
       </div>
